@@ -40,14 +40,21 @@ g = open("baseNum2.txt", "r")
 # baseNum = long(g.read())
 baseNum = g.read()
 
+
 i = minIter + 1
 while i < maxIter:
     num = long(baseNum + str(i))
-
     if miller_rabin(num):
+        print num
+	print
+	print
         print "**** POTENTIAL PRIME ****"
         print num
+	print
+	print
 
+    if i%10000 == 0:
+        print i
     i += 2
 
 
